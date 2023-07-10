@@ -1,0 +1,88 @@
+git file process:
+working directory(git add)-> staging area(git commit)-> repository
+
+
+
+how to set user name and email:
+1. git config --global user.name "user name"
+2. git config --global user.email "emailid"
+
+another way to edit user name and email:
+1. git config --global --edit
+exit system from file:
+Esc(escape)-> : ->WQ ->Enter.
+
+how to check user name and email:
+1. git config --global user.name
+2. git config --global user.email
+
+how to change drive directory:
+cd "C/D/E:\folder name"
+
+how to create folder and change folder/directory and delete directory/folder and Back from folder :
+mkdir folder_name
+rmdir folder_name
+cd folder_name
+cd ..
+
+Initialize git for a folder:
+git init
+
+
+modified history check using git status:
+git status
+
+
+how to add file on git: use for going to staging area:
+git add file_name_with_file_type  // git status use for track file 
+git add . // . use for all file go to staging area
+
+
+how to use git commit: git commit use for going to repository:
+git commit -m "initial commit" // "adding stack.c" or any other
+
+
+check commit: 
+git log
+
+
+format of git:
+1. git for git format
+2. bash for git bash format.
+3. cmd for windows command line format
+
+
+going to commit into different area :
+git checkout hash_code/// hash_code found from (git log) commit hash code)
+git checkout master // use for back now position or branch name
+
+
+
+create branch in master:(if we use branch than if we checkout a branch at the same time other branch didn't change.
+git branch branch_name
+git checkout branch_name
+git checkout -b 'person_name/branch_name' //use for creating branch and checkout branch simultoneously
+
+
+how to transfer one branch property to other branch:
+git merge branch_name
+
+
+Ignore folder from tracking:
+creating .gitignore file inside folder.
+1. touch .gitignore.
+2. or simply create .gitignore file from folder from vscode or drive
+3. and we put all file name with file type. inside .gitignore file.//then all file  starting ignore from git. those are inside from .gitignore file
+
+  
+
+1. ls   --> checking list inside folder
+2. mkdir folder_nmae --> create folder
+3. git init --> initalized empty git repository
+4. ls -a --> show all hidden file
+5. ls .git --> what is the inside git folder
+6. touch file_nmae.txt --> create file
+7. git status --> check how many file inside a folder
+8. rm -rf file_name --> remove file
+9. git add file_name --> add file on git
+10. git commit -m "names.txt file added" -->
