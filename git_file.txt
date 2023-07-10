@@ -1,50 +1,154 @@
+Git is used for:
+-Tracking code changes
+-Tracking who made changes
+-coding collaboration
 
 
-**Setting User Name and Email:**
-1. To set the user name: `git config --global user.name "user name"`
-2. To set the email: `git config --global user.email "emailid"`
+working with Git:
+.Initialize Git on a folder, making it a Repository 
+.Git now creates a hidden folder to keep track of changes in that folder
+.When a file is changed, added or deleted, it is considered modified
+.using git add files going to staging area and then 
+. The staged files are committed, which prompts Git to store a permanent snapshot of the files
+.Git allows you to see the full history of every commit.
+.You can revert back to any  previous commit.
+.Git does not store a separate copy of every file in every commit, keeps track of changes made in each commit!
 
-**Editing User Name and Email:**
-1. To edit the user name and email in a text editor: `git config --global --edit`
-   - Exit the editor by pressing Esc, then typing `:wq` and hitting Enter.
 
-**Checking User Name and Email:**
-1. To check the user name: `git config --global user.name`
-2. To check the email: `git config --global user.email`
 
-**Changing Directory:**
-1. To change the directory to a different drive: `cd "C:/folder name"`
+git file process:
+working directory(git add)-> staging area(git commit)-> repository
 
-**Working with Git:**
-1. To initialize Git for a folder: `git init`
-2. To check the status of modified files: `git status`
-3. To add files to the staging area: `git add file_name_with_file_type`
-   - To add all files: `git add .`
-4. To commit changes to the repository: `git commit -m "commit message"`
-5. To view the commit history: `git log`
+Git Install :
+You can download Git for free: https://www.git-scm.com/
 
-**Working with Branches:**
-1. To create a new branch: `git branch branch_name`
-2. To switch to a branch: `git checkout branch_name`
-   - To create and switch to a branch simultaneously: `git checkout -b branch_name`
-3. To merge a branch into the current branch: `git merge branch_name`
+Check git version:
+git --version
 
-**Ignoring Files/Folders:**
-1. Create a `.gitignore` file in the root of your repository.
-2. Add file/folder names to `.gitignore` to exclude them from tracking.
+Configure Git:
+git config --global user.name "kawchar-hossen"
+git config --global user.email "kawcharhossencd@gmail.com"
 
-**Pushing to Git:**
-1. To add a remote repository: `git remote add origin remote_url`
-   - You can use `origin` or another name for the remote.
-2. To set the default branch (e.g., from "master" to "main"): `git branch -M main`
-3. To push the branch to the remote repository: `git push -u origin branch_name`
+also you can edit user name and email from file:
+git config --global --edit
+exit system from file:
+Esc(escape)-> : ->WQ ->Enter.
 
-**Other Useful Commands:**
-1. `ls`: List files and directories.
-2. `mkdir folder_name`: Create a new folder/directory.
-3. `rm -rf file_name`: Remove a file.
-4. `ls -a`: List all files, including hidden files.
-5. `ls .git`: List files and directories inside the `.git` folder.
-6. `touch file_name.txt`: Create a new file.
+how to check user name and email:
+1. git config --global user.name
+2. git config --global user.email
 
-Please note that some commands may vary depending on the operating system and Git configuration.
+how to change drive directory:
+cd "C/D/E:\folder name"
+
+Creating Git Folder:
+mkdir myproject //makdes a new directory
+cd myproject    // changes the current working directory
+
+Remove Git Folder:
+rmdir myproject
+
+Back From Git Folder:
+cd ..
+
+
+Initialize git for a folder:
+Once you have navigated to the correct folder, you can initialize Git on that folder:
+git init
+
+After initalization now you are going to create a file inside :
+touch file_name_with_extensions
+or you can simply create a file inside current folder.
+
+Checking File inside Folder:
+ls
+ls -a //checking with hidden file
+
+Check the Git status and see if it is a part of our repo:
+git status
+No commits yet
+Untracked files:
+  (use "git add ..." to include in what will be committed)
+    index.html
+nothing added to commit but untracked files present 
+
+Now Git is aware of this file but has not been added to our repository.
+
+how to add file on git: use for going to staging area:
+git add file_name_with_file_type  // git status use for track file 
+git add . // . use for all file go to staging area
+git add --all or git add -A // use of adding more than one file or all file at a time.
+
+
+how to use git commit: git commit use for going to repository:
+git commit -m "initial commit" // "adding stack.c" or any other
+
+
+check commit: 
+git log
+
+
+format change of command line:
+1. git    //for git format
+2. bash   //for git bash format.
+3. cmd    //for windows command line format
+
+Git Help:
+git help -all //see all possible commands
+git commit/init/push --help //show a page on website 
+git commit/init/push -help  //show command line for this command 
+
+
+
+
+going to commit into different area :
+git checkout hash_code/// hash_code found from (git log) commit hash code)
+git checkout master // use for back now position or branch name
+
+
+
+create branch in master:(if we use branch than if we checkout a branch at the same time other branch didn't change.
+git branch branch_name
+git checkout branch_name
+git checkout -b 'person_name/branch_name' //use for creating branch and checkout branch simultoneously
+
+
+how to transfer one branch property to other branch:
+git merge branch_name
+
+Delete a branch:
+git branch -d branch_name 
+
+
+Ignore folder from tracking:
+creating .gitignore file inside folder.
+1. touch .gitignore.
+2. or simply create .gitignore file from folder from vscode or drive
+3. and we put all file name with file type. inside .gitignore file.//then all file  starting ignore from git. those are inside from .gitignore file
+
+  
+push on git:
+1.git remote add origin/(or other_name) https://github.com/kawchar-hossen/filename.git
+2. git branch -M main
+3. git push -u origin branch_name
+ 
+
+fatal: detected dubious ownership in repository at 'D:/project'
+'D:/project' is owned by:
+        'S-1-5-21-1735448415-3792493074-1523754042-1001'
+but the current user is:
+        'S-1-5-21-1735448415-3792493074-1523754042-1010'
+To add an exception for this directory, call:
+git config --global --add safe.directory D:/project
+
+
+1. ls   --> checking list inside folder
+2. mkdir folder_nmae --> create folder
+3. git init --> initalized empty git repository
+4. ls -a --> show all hidden file
+5. ls .git --> what is the inside git folder
+6. touch file_nmae.txt --> create file
+7. git status --> check how many file inside a folder
+8. rm -rf file_name --> remove file
+9. git add file_name --> add file on git
+10. git commit -m "names.txt file added" -->
