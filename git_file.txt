@@ -141,6 +141,12 @@ but the current user is:
 To add an exception for this directory, call:
 git config --global --add safe.directory D:/project
 
+Checking How many branch you in your repo:
+git branch -a
+Which brances do we have now:
+git branch 
+
+sdf
 
 1. ls   --> checking list inside folder
 2. mkdir folder_nmae --> create folder
