@@ -167,7 +167,8 @@ git pull
 pull is a combination of:
 fetch and merge
 
-
+clone a repository:
+git clone url_link_of_a_repository
 
 1. ls   --> checking list inside folder
 2. mkdir folder_nmae --> create folder
