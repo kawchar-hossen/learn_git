@@ -167,6 +167,8 @@ git pull
 pull is a combination of:
 fetch and merge
 
+
+
 1. ls   --> checking list inside folder
 2. mkdir folder_nmae --> create folder
 3. git init --> initalized empty git repository
@@ -177,4 +179,6 @@ fetch and merge
 8. rm -rf file_name --> remove file
 9. git add file_name --> add file on git
 10. git commit -m "names.txt file added" -->
+
+The owner of this content is MD Kawchar Hossen.
 
