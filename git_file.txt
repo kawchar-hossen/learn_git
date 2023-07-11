@@ -153,7 +153,3 @@ git config --global --add safe.directory D:/project
 9. git add file_name --> add file on git
 10. git commit -m "names.txt file added" -->
 
-Git Fetch
-fetch gets all the change history of a tracked branch/repo.
-
-So, on your local Git, fetch updates to see what has changed on GitHub:
