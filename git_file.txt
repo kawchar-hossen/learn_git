@@ -83,6 +83,8 @@ git add --all or git add -A // use of adding more than one file or all file at a
 how to use git commit: git commit use for going to repository:
 git commit -m "initial commit" // "adding stack.c" or any other
 
+add and commit at the same time:
+git commit -a -m "any commit"
 
 check commit: 
 git log
