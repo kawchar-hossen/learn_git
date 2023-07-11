@@ -152,3 +152,7 @@ git config --global --add safe.directory D:/project
 8. rm -rf file_name --> remove file
 9. git add file_name --> add file on git
 10. git commit -m "names.txt file added" -->
+
+pull is a combination of 2 different commands:
+fetch
+merge
