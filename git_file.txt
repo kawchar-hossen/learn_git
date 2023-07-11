@@ -1,4 +1,4 @@
-Git is used for:
+Gidfdfkkdidfused for:
 -Tracking code changes
 -Tracking who made changes
 -coding collaboration
@@ -203,6 +203,11 @@ kaw and origin
 Ammend command (modify last recent commit):
 git commit --amend --m "message fiel name"
 
+How to write vim file:
+vim file_name_with_extension
+then press i for INSERT mode. after edit your code. then press (Esc and then :wq then enter) for exit from file.
+cat file_name //check we have done these changes in these file
+
 How To Create and Add SSH Key to Github :
 1. Open Git Bash / WSL on Windows.
 2. Generate a new ED25519 SSH key pair by running below command. Please ensure that you are usning your Email-ID :
@@ -216,5 +221,6 @@ Note: If clip isn't working, you can locate the hidden .ssh folder, open the fil
 
 
 
-The owner of this content is MD Kawchar Hossen.
+The owner of this content is MD Kawchar.
+
 
