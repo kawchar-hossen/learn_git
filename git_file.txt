@@ -170,6 +170,25 @@ fetch and merge
 clone a repository:
 git clone url_link_of_a_repository
 
+Configuring Remotes:
+Let's see how the remotes of this Git is set up:
+git remote -v 
+start https://github.com/kawchar-hossen/learn_git/git_file.git(fetch)
+start https://github.com/kawchar-hossen/learn_git/git_file.git(push)
+
+We rename the original remote:
+git remote origin kaw
+kaw https://github.com/kawchar-hossen/learn_git/git_file.git(fetch)
+kaw https://github.com/kawchar-hossen/learn_git/git_file.git(push)
+
+and add that as origin:
+git remote add kaw(origin) url
+Now you have two remote:
+kaw and origin 
+
+
+
+
 1. ls   --> checking list inside folder
 2. mkdir folder_nmae --> create folder
 3. git init --> initalized empty git repository
@@ -180,6 +199,22 @@ git clone url_link_of_a_repository
 8. rm -rf file_name --> remove file
 9. git add file_name --> add file on git
 10. git commit -m "names.txt file added" -->
+
+Ammend command (modify last recent commit):
+git commit --amend --m "message fiel name"
+
+How To Create and Add SSH Key to Github :
+1. Open Git Bash / WSL on Windows.
+2. Generate a new ED25519 SSH key pair by running below command. Please ensure that you are usning your Email-ID :
+ssh-keygen -t ed25519 -C "abc@gmail.com"
+3. Then press 'Enter' thrice
+4. Copy your public SSH key to the clipboard by using below option 1 or 2 command
+-> cat ~/.ssh/id ed25519.pub | clip
+-> clip < ~/.ssh/id_ed25519.pub
+Note: If clip isn't working, you can locate the hidden .ssh folder, open the file in your favorite text editor, and copy it to your clipboard.
+5. paste it inside -> edit profile -> ssh-keys -> key (textbox)
+
+
 
 The owner of this content is MD Kawchar Hossen.
 
