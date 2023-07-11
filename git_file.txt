@@ -150,7 +150,17 @@ pull and fetch:
 pull means download the changes from remote repository to local directory 
 fetch means just it is a verification purpose. are there any changes availble are not.
 
+Git Fetch
+fetch gets all the change history of a tracked branch/repo.
+So, on your local Git, fetch updates to see what has changed on GitHub:
+and then 
+Git Merge
+merge combines the current branch, with a specified branch.
+We have confirmed that the updates are as expected, and we can merge our current branch (master) with origin/master:
 
+Git pull:
+Use pull to update our local Git:
+git pull
 
 
 1. ls   --> checking list inside folder
