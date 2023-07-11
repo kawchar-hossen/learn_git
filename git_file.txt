@@ -155,4 +155,5 @@ git config --global --add safe.directory D:/project
 
 pull is a combination of 2 different commands:
 fetch
-merge
+
+
