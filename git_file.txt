@@ -146,7 +146,12 @@ git branch -a
 Which brances do we have now:
 git branch 
 
-sdf
+pull and fetch:
+pull means download the changes from remote repository to local directory 
+fetch means just it is a verification purpose. are there any changes availble are not.
+
+
+
 
 1. ls   --> checking list inside folder
 2. mkdir folder_nmae --> create folder
@@ -158,4 +163,3 @@ sdf
 8. rm -rf file_name --> remove file
 9. git add file_name --> add file on git
 10. git commit -m "names.txt file added" -->
-
