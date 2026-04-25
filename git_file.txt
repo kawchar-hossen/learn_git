@@ -219,22 +219,120 @@ ssh-keygen -t ed25519 -C "abc@gmail.com"
 Note: If clip isn't working, you can locate the hidden .ssh folder, open the file in your favorite text editor, and copy it to your clipboard.
 5. paste it inside -> edit profile -> ssh-keys -> key (textbox)
 
+
 👍 Best practice flow
 git add .
 git commit -m "update"
 git pull origin main --rebase
 git push
 
-Upload project to GitHub
+
+
+Complete flow: git init → git push
+✅ 1. Initialize repository
 git init
+✅ 2. Add files
 git add .
-git commit -m "Campus Marketplace Ready"
+✅ 3. Commit files
+git commit -m "Initial commit"
+✅ 4. Connect to GitHub repo
+git remote add origin https://github.com/your-username/your-repo.git
+
+Check:
+
+git remote -v
+✅ 5. Set branch to main
 git branch -M main
-git remote add origin YOUR_GITHUB_REPO_URL
+✅ 6. Push to GitHub (first time)
 git push -u origin main
+⚠️ If you get the error (your case)
+! [rejected] main -> main (non-fast-forward)
+
+👉 Use this safe fix:
+
+git pull origin main --rebase
+git push -u origin main
+🚨 FORCE PUSH (Danger Zone)
+Command:
+git push -u origin main --force
+❗ What force push actually does
+
+It completely replaces the remote branch with your local branch.
+
+Think of it like:
+
+“Delete whatever is on GitHub and replace it with my version.”
+
+⚠️ When you SHOULD use force push
+
+Use it ONLY in these situations:
+
+✔️ 1. You want to overwrite remote completely
+
+Example:
+
+GitHub repo has a README you don’t need
+You want your local project to fully replace it
+✔️ 2. You rewrote commit history
+
+Example:
+
+git commit --amend
+git rebase -i HEAD~3
+
+These change commit history → normal push fails → force push needed
+
+✔️ 3. You are working SOLO
+No team
+No one else depends on the repo
+🚫 When you should NEVER use force push
+❌ In team projects
+
+You will:
+
+Delete teammates’ commits
+Break their code
+Cause serious conflicts
+❌ If you don’t understand the difference between local & remote
+
+Force push is not a “fix error” button — it’s a rewrite history command.
+
+🔥 Safer version (recommended instead of --force)
+git push --force-with-lease
+
+👉 This only force pushes if no one else updated the remote
+👉 Much safer than --force
+
+🧠 Quick decision guide
+Situation	What to do
+First push, no remote changes	git push -u origin main
+Remote has commits	git pull --rebase
+Conflict happens	Resolve → continue
+You want to overwrite remote	--force
+You rewrote history	--force-with-lease
+💡 Real example (your situation)
+
+If your repo was created on GitHub with a README:
+
+Option 1 (safe):
+git pull origin main --rebase
+git push -u origin main
+Option 2 (overwrite GitHub):
+git push -u origin main --force
+🧾 Final advice
+Use normal push 95% of the time
+Use force push only when you KNOW what you're doing
+Prefer:
+git push --force-with-lease
 
 
+ase 3: You want to cancel everything
 
+If you're confused and want to go back:
+
+git rebase --abort
+
+👉 This returns your repo to the previous clean state
 The owner of this content is MD Kawchar.
 
 
