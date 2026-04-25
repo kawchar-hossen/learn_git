@@ -225,6 +225,14 @@ git commit -m "update"
 git pull origin main --rebase
 git push
 
+Upload project to GitHub
+git init
+git add .
+git commit -m "Campus Marketplace Ready"
+git branch -M main
+git remote add origin YOUR_GITHUB_REPO_URL
+git push -u origin main
+
 
 
 The owner of this content is MD Kawchar.
