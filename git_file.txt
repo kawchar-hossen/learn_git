@@ -1,0 +1,232 @@
+Gidfdfkkdidfused for:
+-Tracking code changes
+-Tracking who made changes
+-coding collaboration
+
+
+working with Git:
+.Initialize Git on a folder, making it a Repository 
+.Git now creates a hidden folder to keep track of changes in that folder
+.When a file is changed, added or deleted, it is considered modified
+.using git add files going to staging area and then 
+. The staged files are committed, which prompts Git to store a permanent snapshot of the files
+.Git allows you to see the full history of every commit.
+.You can revert back to any  previous commit.
+.Git does not store a separate copy of every file in every commit, keeps track of changes made in each commit!
+
+
+
+git file process:
+working directory(git add)-> staging area(git commit)-> repository
+
+Git Install :
+You can download Git for free: https://www.git-scm.com/
+
+Check git version:
+git --version
+
+Configure Git:
+git config --global user.name "kawchar-hossen"
+git config --global user.email "kawcharhossencd@gmail.com"
+
+also you can edit user name and email from file:
+git config --global --edit
+exit system from file:
+Esc(escape)-> : ->WQ ->Enter.
+
+how to check user name and email:
+1. git config --global user.name
+2. git config --global user.email
+
+how to change drive directory:
+cd "C/D/E:\folder name"
+
+Creating Git Folder:
+mkdir myproject //makdes a new directory
+cd myproject    // changes the current working directory
+
+Remove Git Folder:
+rmdir myproject
+
+Back From Git Folder:
+cd ..
+
+
+Initialize git for a folder:
+Once you have navigated to the correct folder, you can initialize Git on that folder:
+git init
+
+After initalization now you are going to create a file inside :
+touch file_name_with_extensions
+or you can simply create a file inside current folder.
+
+Checking File inside Folder:
+ls
+ls -a //checking with hidden file
+
+Check the Git status and see if it is a part of our repo:
+git status
+No commits yet
+Untracked files:
+  (use "git add ..." to include in what will be committed)
+    index.html
+nothing added to commit but untracked files present 
+
+Now Git is aware of this file but has not been added to our repository.
+
+how to add file on git: use for going to staging area:
+git add file_name_with_file_type  // git status use for track file 
+git add . // . use for all file go to staging area
+git add --all or git add -A // use of adding more than one file or all file at a time.
+
+
+how to use git commit: git commit use for going to repository:
+git commit -m "initial commit" // "adding stack.c" or any other
+
+add and commit at the same time:
+git commit -a -m "any commit"
+
+check commit: 
+git log
+
+
+format change of command line:
+1. git    //for git format
+2. bash   //for git bash format.
+3. cmd    //for windows command line format
+
+Git Help:
+git help -all //see all possible commands
+git commit/init/push --help //show a page on website 
+git commit/init/push -help  //show command line for this command 
+
+
+
+
+going to commit into different area :
+git checkout hash_code/// hash_code found from (git log) commit hash code)
+git checkout master // use for back now position or branch name
+
+
+
+create branch in master:(if we use branch than if we checkout a branch at the same time other branch didn't change.
+git branch branch_name
+git checkout branch_name
+git checkout -b 'person_name/branch_name' //use for creating branch and checkout branch simultoneously
+
+
+how to transfer one branch property to other branch:
+git merge branch_name
+
+Delete a branch:
+git branch -d branch_name 
+
+
+Ignore folder from tracking:
+creating .gitignore file inside folder.
+1. touch .gitignore.
+2. or simply create .gitignore file from folder from vscode or drive
+3. and we put all file name with file type. inside .gitignore file.//then all file  starting ignore from git. those are inside from .gitignore file
+
+  
+push on git:
+1.git remote add origin/(or other_name) https://github.com/kawchar-hossen/filename.git
+2. git branch -M main
+3. git push -u origin branch_name
+ 
+
+fatal: detected dubious ownership in repository at 'D:/project'
+'D:/project' is owned by:
+        'S-1-5-21-1735448415-3792493074-1523754042-1001'
+but the current user is:
+        'S-1-5-21-1735448415-3792493074-1523754042-1010'
+To add an exception for this directory, call:
+git config --global --add safe.directory D:/project
+
+Checking How many branch you in your repo:
+git branch -a
+Which brances do we have now:
+git branch 
+
+pull and fetch:
+pull means download the changes from remote repository to local directory 
+fetch means just it is a verification purpose. are there any changes availble are not.
+
+Git Fetch
+fetch gets all the change history of a tracked branch/repo.
+So, on your local Git, fetch updates to see what has changed on GitHub:
+and then 
+Git Merge
+merge combines the current branch, with a specified branch.
+We have confirmed that the updates are as expected, and we can merge our current branch (master) with origin/master:
+
+Git pull:
+Use pull to update our local Git:
+git pull
+
+pull is a combination of:
+fetch and merge
+
+clone a repository:
+git clone url_link_of_a_repository
+
+Configuring Remotes:
+Let's see how the remotes of this Git is set up:
+git remote -v 
+start https://github.com/kawchar-hossen/learn_git/git_file.git(fetch)
+start https://github.com/kawchar-hossen/learn_git/git_file.git(push)
+
+We rename the original remote:
+git remote origin kaw
+kaw https://github.com/kawchar-hossen/learn_git/git_file.git(fetch)
+kaw https://github.com/kawchar-hossen/learn_git/git_file.git(push)
+
+and add that as origin:
+git remote add kaw(origin) url
+Now you have two remote:
+kaw and origin 
+
+
+
+
+1. ls   --> checking list inside folder
+2. mkdir folder_nmae --> create folder
+3. git init --> initalized empty git repository
+4. ls -a --> show all hidden file
+5. ls .git --> what is the inside git folder
+6. touch file_nmae.txt --> create file
+7. git status --> check how many file inside a folder
+8. rm -rf file_name --> remove file
+9. git add file_name --> add file on git
+10. git commit -m "names.txt file added" -->
+
+Ammend command (modify last recent commit):
+git commit --amend --m "message fiel name"
+
+How to write vim file:
+vim file_name_with_extension
+then press i for INSERT mode. after edit your code. then press (Esc and then :wq then enter) for exit from file.
+cat file_name //check we have done these changes in these file
+
+How To Create and Add SSH Key to Github :
+1. Open Git Bash / WSL on Windows.
+2. Generate a new ED25519 SSH key pair by running below command. Please ensure that you are usning your Email-ID :
+ssh-keygen -t ed25519 -C "abc@gmail.com"
+3. Then press 'Enter' thrice
+4. Copy your public SSH key to the clipboard by using below option 1 or 2 command
+-> cat ~/.ssh/id ed25519.pub | clip
+-> clip < ~/.ssh/id_ed25519.pub
+Note: If clip isn't working, you can locate the hidden .ssh folder, open the file in your favorite text editor, and copy it to your clipboard.
+5. paste it inside -> edit profile -> ssh-keys -> key (textbox)
+
+👍 Best practice flow
+git add .
+git commit -m "update"
+git pull origin main --rebase
+git push
+
+
+
+The owner of this content is MD Kawchar.
+
+
